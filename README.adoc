@@ -14,9 +14,12 @@ which is located in `src/main/resources`.
 
 == How to run in openshift
 Login into your openshift project and ensure that the logged in user has the proper permissions.
-Use the following command to build and deploy the service in the openshift project.
+Use the following commands to deploy and undeploy the service.
 
-`clean install fabric8:deploy`
+* `clean install fabric8:deploy` +
+  Deploy the service in the openshift project
+* `clean compile fabric8:undeploy` +
+  Undeploy the service from the openshift project
 
 The parameter **CONFIG_LOCATION_EXTERNAL** is set in the `src/main/fabric8/deployment.yml`, which references a ConfigMap key,
 which is is defined in `src/main/fabric8/configmap.yml`.
