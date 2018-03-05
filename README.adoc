@@ -2,7 +2,7 @@
 
 This service represents a service where digital service can be ordered.
 This is a service which gets integrated via a service created with Fuse Integration service 2.0.
-The integration service is located in the repository include::https://github.com/cchet-thesis-msc/fis-conax[Integration Service Conax].
+The integration service is located in the repository link:https://github.com/cchet-thesis-msc/fis-conax[fis-conax].
 
 == How to run locally
 Use the following command to build and run the service locally.
