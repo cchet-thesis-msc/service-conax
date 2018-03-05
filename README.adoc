@@ -1,2 +1,22 @@
-# conax-service
-The conax service which gets integrated via fuse integration services
+= service-conax
+
+This service represents a service where digital service can be ordered.
+This is a service which gets integrated via a service created with Fuse Integration service 2.0.
+The integration service is located in the repository include::https://github.com/cchet-thesis-msc/fis-conax[Integration Service Conax].
+
+== How to run locally
+Use the following command to build and run the service locally.
+
+`clean compile package spring-boot:run -DCONFIG_LOCATION_EXTERNAL=classpath:`
+
+The parameter **CONFIG_LOCATION_EXTERNAL** defines the prefix for the external-application.properties location,
+which is located in `src/main/resources`.
+
+== How to run in openshift
+Login into your openshift project and ensure that the logged in user has the proper permissions.
+Use the following command to build and deploy the service in the openshift project.
+
+`clean install fabric8:deploy`
+
+The parameter **CONFIG_LOCATION_EXTERNAL** is set in the `src/main/fabric8/deployment.yml`, which references a ConfigMap key,
+which is is defined in `src/main/fabric8/configmap.yml`.
