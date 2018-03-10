@@ -21,12 +21,14 @@
         <maven.min.version>3.0</maven.min.version>
         <jdk.min.version>${maven.compiler.source}</jdk.min.version>
 
-        <!-- configure the versions you want to use here '2.2.170.redhat-000022' -->
-        <fabric8.version>2.2.170.redhat-000022</fabric8.version>
+        <!-- configure the versions you want to use here '2' -->
+        <!--<fabric8.version>2.2.170.redhat-00002</fabric8.version>-->
+        <fabric8.version>3.0.8</fabric8.version>
         <spring-boot.version>1.4.1.RELEASE</spring-boot.version>
 
         <!-- maven plugin versions -->
-        <fabric8.maven.plugin.version>3.1.80.redhat-000022</fabric8.maven.plugin.version>
+        <!--<fabric8.maven.plugin.version>3.1.80.redhat-000022</fabric8.maven.plugin.version>-->
+        <fabric8.maven.plugin.version>3.5.38</fabric8.maven.plugin.version>
         <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
         <maven-jaxb2-plugin.version>2.3.1</maven-jaxb2-plugin.version>
