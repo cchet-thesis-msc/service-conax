@@ -20,7 +20,7 @@ import javax.xml.ws.Endpoint;
  * @since 03/04/18
  */
 @SpringBootApplication
-@PropertySource("${CONFIG_LOCATION_EXTERNAL}/external-application.properties")
+@PropertySource("${CONFIG_LOCATION_EXTERNAL}")
 @ComponentScan(basePackageClasses = Application.class)
 @EnableAutoConfiguration
 public class Application {
