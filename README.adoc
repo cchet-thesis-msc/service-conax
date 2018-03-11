@@ -26,16 +26,8 @@ Use the following command to build and run the service locally.
 The parameter **CONFIG_LOCATION_EXTERNAL** defines the fully qualified path to the file developer-application.properties,
 which is located in `src/main/resources`.
 
-
 == How to run in Openshift
 This section describes how to run the service in a local Openshift cluster.
-
-=== Preconditions
-Make sure that the wsdl location of the conax service points to the proper location in the following files:
-
-* `pom.xml`
-* `src/main/fabric8/configmap.yml` +
-  When ran in Openshift
 
 === Windows
 This section describes how to start the local Openshift cluster on a windows machine with *powershift-cli*.
