@@ -1,19 +1,16 @@
 package com.gepardec.sypoc.conax;
 
-import com.gepardec.sypoc.conax.service.impl.ConaxWebserviceImpl;
-import com.gepardec.sypoc.wsdl.conax.outgoingmessage.OutgoingMessagePortType;
-import org.apache.cxf.Bus;
-import org.apache.cxf.jaxws.EndpointImpl;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.InjectionPoint;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
-
-import javax.xml.namespace.QName;
-import javax.xml.ws.Endpoint;
+import org.springframework.context.annotation.Scope;
 
 /**
  * @author Thomas Herzog <herzog.thomas81@gmail.com>
@@ -30,25 +27,9 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    private final Bus bus;
-
-    @Autowired
-    public Application(final Bus bus) {
-        this.bus = bus;
-    }
-
     @Bean
-    OutgoingMessagePortType createConaxWebserviceImpl() {
-        return new ConaxWebserviceImpl();
-    }
-
-    @Bean("conaxEndpoint")
-    Endpoint createConaxWebserviceEndpoint(final OutgoingMessagePortType service) {
-        EndpointImpl endpoint = new EndpointImpl(bus, service);
-        endpoint.setWsdlLocation("classpath:/wsdl/OutgoingMessage.wsdl");
-        endpoint.setServiceName(new QName("http://gepardec.com/sypoc/wsdl/conax/outgoingMessage", "OutgoingMessage"));
-        endpoint.publish("/conax");
-
-        return endpoint;
+    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    Logger createLogger(final InjectionPoint ip) {
+        return LoggerFactory.getLogger(ip.getDeclaredType());
     }
 }
