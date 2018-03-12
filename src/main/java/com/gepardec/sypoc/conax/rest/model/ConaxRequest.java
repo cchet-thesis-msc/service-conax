@@ -1,4 +1,4 @@
-package com.gepardec.sypoc.conax.jaxrs.model;
+package com.gepardec.sypoc.conax.rest.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

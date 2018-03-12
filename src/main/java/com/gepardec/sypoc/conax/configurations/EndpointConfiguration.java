@@ -1,6 +1,5 @@
-package com.gepardec.sypoc.conax.configuration;
+package com.gepardec.sypoc.conax.configurations;
 
-import com.gepardec.sypoc.conax.jaxws.ConaxWebserviceImpl;
 import com.gepardec.sypoc.wsdl.conax.outgoingmessage.OutgoingMessagePortType;
 import org.apache.cxf.Bus;
 import org.apache.cxf.jaxws.EndpointImpl;
@@ -16,19 +15,10 @@ import javax.xml.ws.Endpoint;
  * @since 03/11/18
  */
 @Configuration
-public class WebserviceConfiguration {
-
-    private final Bus bus;
+public class EndpointConfiguration {
 
     @Autowired
-    public WebserviceConfiguration(final Bus bus) {
-        this.bus = bus;
-    }
-
-    @Bean
-    OutgoingMessagePortType createConaxWebserviceImpl() {
-        return new ConaxWebserviceImpl();
-    }
+    private Bus bus;
 
     @Bean("conaxEndpoint")
     Endpoint createConaxWebserviceEndpoint(final OutgoingMessagePortType service) {

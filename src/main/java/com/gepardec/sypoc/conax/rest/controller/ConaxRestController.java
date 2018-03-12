@@ -1,6 +1,6 @@
-package com.gepardec.sypoc.conax.jaxrs.controller;
+package com.gepardec.sypoc.conax.rest.controller;
 
-import com.gepardec.sypoc.conax.jaxrs.model.ConaxRequest;
+import com.gepardec.sypoc.conax.rest.model.ConaxRequest;
 import com.gepardec.sypoc.conax.utils.LogHelper;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

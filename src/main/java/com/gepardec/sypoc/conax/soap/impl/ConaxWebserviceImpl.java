@@ -1,4 +1,4 @@
-package com.gepardec.sypoc.conax.jaxws;
+package com.gepardec.sypoc.conax.soap.impl;
 
 import com.gepardec.sypoc.wsdl.conax.outgoingmessage.MessageRequest;
 import com.gepardec.sypoc.wsdl.conax.outgoingmessage.MessageResponse;

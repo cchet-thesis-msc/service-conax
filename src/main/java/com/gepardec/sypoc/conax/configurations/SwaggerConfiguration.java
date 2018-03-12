@@ -1,4 +1,4 @@
-package com.gepardec.sypoc.conax.configuration;
+package com.gepardec.sypoc.conax.configurations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
