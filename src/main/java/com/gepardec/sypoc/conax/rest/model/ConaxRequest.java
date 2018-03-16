@@ -42,15 +42,23 @@ public interface ConaxRequest {
         @JsonProperty("orderList")
         String orderList();
 
+        @JsonProperty("country")
+        String country();
+
+        @JsonProperty("nofsmartcards")
+        byte nofsmartcards();
+
         @JsonProperty("active")
         boolean active();
 
         @JsonProperty("errorDate")
         @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd.MM.yyyy hh:mm:ss")
-        @Nullable LocalDateTime errorDate();
+        @Nullable
+        LocalDateTime errorDate();
 
         @JsonProperty("errorDescription")
-        @Nullable String errorDescription();
+        @Nullable
+        String errorDescription();
 
         @JsonProperty("priority")
         int priority();
